@@ -15,9 +15,9 @@ return [
     // +----------------------------------------------------------------------
 
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => true,
     // 应用Trace
-    'app_trace'              => false,
+    'app_trace'              => true,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -127,7 +127,7 @@ return [
         // 模板路径
         'view_path'    => '',
         // 模板后缀
-        'view_suffix'  => 'html',
+        'view_suffix'  => 'php',
         // 模板文件名分隔符
         'view_depr'    => DS,
         // 模板引擎普通标签开始标记
@@ -143,8 +143,8 @@ return [
     // 视图输出字符串内容替换
     'view_replace_str'       => [],
     // 默认跳转页面对应的模板文件
-    'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
-    'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
+    'dispatch_success_tmpl'  => APP_PATH . 'admin' . DS . 'view' . DS . 'block' . DS . 'dispatch_jump.tpl',
+    'dispatch_error_tmpl'    => APP_PATH . 'admin' . DS . 'view' . DS . 'block' . DS . 'dispatch_jump.tpl',
 
     // +----------------------------------------------------------------------
     // | 异常及错误设置
@@ -205,7 +205,7 @@ return [
         // SESSION_ID的提交变量,解决flash上传跨域
         'var_session_id' => '',
         // SESSION 前缀
-        'prefix'         => 'think',
+        'prefix'         => 'apsphp_',
         // 驱动方式 支持redis memcache memcached
         'type'           => '',
         // 是否自动开启 SESSION
@@ -217,7 +217,7 @@ return [
     // +----------------------------------------------------------------------
     'cookie'                 => [
         // cookie 名称前缀
-        'prefix'    => '',
+        'prefix'    => 'apsphp_',
         // cookie 保存时间
         'expire'    => 0,
         // cookie 保存路径
